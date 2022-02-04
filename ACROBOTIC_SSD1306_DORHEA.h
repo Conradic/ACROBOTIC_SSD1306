@@ -3,7 +3,7 @@
   Author: Makerbro
   Platforms: ESP8266
   Language: C++
-  File: ACROBOTIC_SSD1306_DORHEA.h
+  File: ACROBOTIC_SSD1306.h
   ------------------------------------------------------------------------
   Description: 
   SSD1306 OLED Driver Library.
@@ -18,8 +18,8 @@
   information.  All text above must be included in any redistribution. 
 */
 
-#ifndef ACROBOTIC_SSD1306_DORHEA_H
-#define ACROBOTIC_SSD1306_DORHEA_H
+#ifndef ACROBOTIC_SSD1306_H
+#define ACROBOTIC_SSD1306_H
 
 #if ARDUINO >= 100
  #include "Arduino.h"
@@ -71,7 +71,7 @@
 #define Scroll_128Frames              0x2
 #define Scroll_256Frames              0x3
 
-class ACROBOTIC_SSD1306_DORHEA {
+class ACROBOTIC_SSD1306 {
   public:
     char addressingMode;
     void init(void);
@@ -114,6 +114,6 @@ class ACROBOTIC_SSD1306_DORHEA {
     uint8_t m_row;              // Cursor row (RAM). 
 };
 
-extern ACROBOTIC_SSD1306_DORHEA oled;  // ACROBOTIC_SSD1306 object 
+extern ACROBOTIC_SSD1306 oled;  // ACROBOTIC_SSD1306 object 
 
 #endif

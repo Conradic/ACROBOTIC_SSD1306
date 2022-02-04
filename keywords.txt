@@ -7,7 +7,7 @@
 #######################################
 
 addressingMode                  KEYWORD1
-ACROBOTIC_SSD1306_DORHEA        KEYWORD1
+ACROBOTIC_SSD1306               KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -52,4 +52,4 @@ Scroll_256Frames                LITERAL1
 # Instances (KEYWORD2)
 #######################################
 
-ACROBOTIC_SSD1306_DORHEA        KEYWORD2
+ACROBOTIC_SSD1306               KEYWORD2

@@ -18,7 +18,8 @@
   information.  All text above must be included in any redistribution. 
 */
 #include <Wire.h>
-#include <ACROBOTIC_SSD1306_DORHEA.h>
+#include <Ethernet.h>
+#include <ACROBOTIC_SSD1306.h>
 
 void setup()
 {
@@ -27,10 +28,18 @@ void setup()
   oled.setFont(font5x7);            // Set font type (default 8x8)
   oled.clearDisplay();              // Clear screen
   oled.setTextXY(0,0);              // Set cursor position, start of line 0
-  String testString = "Hello there Calico!";  
-  oled.putString(testString);
+  String ipAddress = IPAddress2String(Ethernet.localIP());  
+  oled.putString(ipAddress);
 }
 
 void loop()
 {
+}
+
+String IPAddress2String(IPAddress address)
+{
+ return String(address[0]) + "." + 
+        String(address[1]) + "." + 
+        String(address[2]) + "." + 
+        String(address[3]);
 }
